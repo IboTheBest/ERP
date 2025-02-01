@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@font-face {
+    font-display: swap;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/lato-v24-latin-700.woff2') format('woff2');
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.ant-input-outlined:hover {
+    border-color: rgb(188, 142, 91);
+}
+
+.ant-input-affix-wrapper-focused {
+    border-color: #bc8e5b !important;
+    box-shadow: 0 0 0 2px rgba(188, 143, 91, 0.144) !important;
+}
+
+.ant-btn {
+    background-color: rgb(188, 142, 91);
+}
+
+.ant-btn:hover {
+    background-color: rgba(188, 143, 91, 0.891) !important;
+}
+
+.ant-btn-icon {
+    margin-top: -7px !important;
+}
+.icon-in-login{
+    user-select: none;
+    pointer-events: none;
+}
+.ant-btn-text{
+    background: none !important;
+    color: white;
+}
