@@ -48,3 +48,16 @@ body{
     background: none !important;
     color: white;
 }
+.ant-btn-color-default:hover{
+    border-color:white !important;
+    color: white !important;
+}
+.ant-btn-color-default{
+    color: white;
+}
+.ant-menu-item-selected.active{
+    background-color: #bc8e5b !important;
+}
+.ant-menu-item-selected{
+    background-color: #bc8e5b !important;
+}

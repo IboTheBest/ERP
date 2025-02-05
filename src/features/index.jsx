@@ -8,7 +8,7 @@ const Layaut = ({ children }) => {
             <Navbar />
             <div className='w-full'>
                 <Header />
-                <div className='h-[93vh] w-full bg-red-200'>
+                <div className='h-[93vh] w-full bg-[#EEF2F6]'>
                     {children}
                 </div>
             </div>
