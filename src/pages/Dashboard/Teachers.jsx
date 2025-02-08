@@ -45,7 +45,8 @@ const columns = [
 
 function handleSearchByName(e){
   setIsLoading(true)
-  const FilterByName = teachers.filter(item => item.name.toLowerCase().include(e.target.value.toLowerCase()))
+  const FilterByName = teachers.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
+  
   if(e.target.value){
     setTimeout(() => {
       setIsLoading(false)
@@ -55,9 +56,10 @@ function handleSearchByName(e){
   else{
     setTimeout(() => {
       setIsLoading(false)
-      setRefresh(!refresh)
+      setRefresh(false)
     }, 1000)
   }
+  
 }
 
 
