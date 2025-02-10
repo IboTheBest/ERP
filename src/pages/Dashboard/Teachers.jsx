@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Caption from "../../components/Caption"
-import { LineOutlined, MoreOutlined, UserAddOutlined } from '@ant-design/icons'
-import { Button, Input } from 'antd'
+import { UserAddOutlined } from '@ant-design/icons'
+import { Input } from 'antd'
 import FilterStack from '../../components/FilterStack'
-import { instance } from '../../hooks/instance'
 import CustomTable from '../../components/CustomTable'
-
+import { Context } from '../../context/Contex'
+import { getTeachers } from '../../service/getTeachers'
 const Teachers = () => {
 const [stackId, setStackīd] = useState(null)
 const [teachers, setTeachers] = useState([])
 const [isLoading, setIsLoading] = useState(false)
-const [refresh, setRefresh] = useState(false)
+const {refresh, setRefresh} = useContext(Context)    
+
+
 
 const columns = [
   {
     title: 'ID',
-    dataIndex: 'id',
+    dataIndex: "key",
   },
   {
     title: 'Ustoz ismi',
@@ -51,36 +53,25 @@ function handleSearchByName(e){
     setTimeout(() => {
       setIsLoading(false)
     setTeachers(FilterByName)
-    }, 1000)
-  }
-  else{
+  }, 1000)
+  setRefresh(!refresh)
+}
+else{
+    setRefresh(!refresh)
     setTimeout(() => {
       setIsLoading(false)
-      setRefresh(false)
     }, 1000)
   }
   
 }
 
+getTeachers(setTeachers, stackId, refresh)
 
-useEffect(() => {
-  instance().get("/teachers").then(res => {
-    setTeachers(res.data.map((item, index) => {
-      item.key = index
-      item.name = item.name ? item.name : <LineOutlined/>
-      item.age = item.age ? item.age : <LineOutlined/>
-      item.stack = item.stack ? item.stack : <LineOutlined/>
-      item.action = <Button className='!w-[32px] !h-[32px]' size='middle' type='primary'> <MoreOutlined className='rotate-90'/></Button>
-
-      return item
-    }))
-  })
-}, [refresh])
 
 
 return (
   <div className='p-5'>
-    <Caption title={'Ustozlar'} icon={<UserAddOutlined/>} count={5} />
+    <Caption path={"add"} BtnTitle={"Qo'shish"} title={'Ustozlar'} icon={<UserAddOutlined/>} count={5} />
     <div className='my-5 flex gap-10'>
       <label className='flex flex-col'>
         <span className='text-[15px] text-slate-400 pl-1 mb-1'>Qidirish</span>
@@ -88,7 +79,7 @@ return (
       </label>
       <label className='flex flex-col'>
         <span className='text-[15px] text-slate-400 pl-1 mb-1'>Choose stack</span>
-        <FilterStack stackId={stackId} setStackId={setStackīd} />
+        <FilterStack placeholder={"Choose stack"} api={"/stack"} stackId={stackId} setStackId={setStackīd} />
       </label>
     </div>
     <CustomTable isLoading={isLoading} columns={columns} data={teachers} />

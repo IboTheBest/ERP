@@ -7,6 +7,7 @@ const Header = () => {
     const [logout, setLogout] = useState(false)
     const [loadingBtn, setLoadingBtn] = useState(false)
     const { collapsed, setCollapsed } = useContext(Context)
+    const {refresh, setRefresh} = useContext(Context)    
     function handleLogOutOk() {
         setLoadingBtn(true)
         setTimeout(() => {
@@ -24,7 +25,7 @@ const Header = () => {
                 }
             </button>
             <div className='flex items-center gap-[30px]'>
-                <Button onClick={() => window.location.reload()} className='!hover:border-white !text-white bg-white4' type='primary'>
+                <Button onClick={() => setRefresh(!refresh)} className='!hover:border-white !text-white bg-white4' type='primary'>
                     <span><ExclamationCircleOutlined /></span>
                     <span>Synxronlash</span>
                 </Button>
