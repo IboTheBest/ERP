@@ -15,3 +15,10 @@ export const Edit = (data, API, setIsLoading, toast, navigate) => instance().put
         toast.success("Yangilandi")
     },1000)
 })
+export const Delete = (API, setIsLoading, toast, navigate) => instance().delete(API).then(() => {
+    setTimeout(() => {
+        setIsLoading(false)
+        navigate(-1)
+        toast.success("O'chirildi")
+    },1000)
+})

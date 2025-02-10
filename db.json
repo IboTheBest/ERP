@@ -35,128 +35,33 @@
   ],
   "teachers": [
     {
-      "name": "Nurillo",
-      "surname": "Suyunboyev",
-      "age": 41,
-      "stackId": "2",
-      "stack": "Backend",
-      "region": "Namangan",
-      "regionId": "3",
-      "district": "Norin",
-      "status": "Bosh ustoz",
-      "statusId": "3",
-      "experience": "2 yil",
-      "gender": "Erkak",
-      "email": "nurillosuyunboyev6@gmail.com",
-      "phone": "+998994683600",
-      "isMerried": "Bo'ydoq",
-      "study": "National Universiy",
-      "workCompany": [
-        "TikTok",
-        "Facebook",
-        "Telegram"
-      ],
-      "workCompanyId": [
-        "3",
-        "2",
-        "5"
-      ],
-      "id": "1"
-    },
-    {
-      "name": "Valijon",
-      "surname": "Quvondiqov",
-      "age": "17",
-      "stackId": "2",
-      "stack": "Backend",
-      "region": "Jizzax",
-      "regionId": "6",
-      "district": "Kosmanavtlar",
-      "status": "Bosh ustoz",
-      "statusId": "3",
-      "experience": "1",
-      "gender": "Erkak",
-      "email": "valijon@gmail.com",
-      "phone": "+998991231212",
-      "isMerried": "Yoq ",
-      "study": "TATU",
-      "workCompany": [
-        "Microsoft",
-        "Tesla",
-        "OpenAI"
-      ],
-      "workCompanyId": [
-        "8",
-        "6",
-        "4"
-      ],
-      "id": "bc99"
-    },
-    {
-      "id": "f2b9",
-      "name": "Hondamir",
-      "surname": "Usmonov",
-      "age": "21",
-      "stackId": "2",
-      "stack": "Backend",
-      "region": "Toshkent",
-      "regionId": "1",
-      "district": "Olmazor tumani",
-      "status": "Asosiy ustoz",
-      "statusId": "2",
-      "experience": "2 yil",
-      "gender": "Erkak",
-      "email": "hondamir@gmail.com",
-      "phone": "+998904445566",
-      "isMerried": "Yo'q",
-      "study": "MDIS",
-      "workCompany": [
-        "OpenAI",
-        "TikTok",
-        "Facebook"
-      ],
-      "workCompanyId": [
-        "4",
-        "3",
-        "2"
-      ]
-    },
-    {
-      "name": "Ibrohimjon",
+      "id": "6986",
+      "name": "Ibrohim",
       "surname": "Sadriddinov",
       "age": "16",
       "stackId": "1",
       "stack": "Frontend",
-      "region": "Toshkent",
-      "regionId": "1",
-      "district": "Yashnabod",
+      "region": "Namangan",
+      "regionId": "3",
+      "district": "Uychi",
       "status": "Asosiy ustoz",
       "statusId": "2",
-      "experience": "4",
+      "experience": "5",
       "gender": "Erkak",
       "email": "cybergenyus@gmail.com",
       "phone": "+998946690630",
       "isMerried": "yoq",
       "study": "Maktab-231",
       "workCompany": [
-        "Microsoft",
-        "Apple",
-        "Tesla",
-        "Telegram",
-        "OpenAI",
+        "Facebook",
         "TikTok",
-        "Facebook"
+        "OpenAI"
       ],
       "workCompanyId": [
-        "8",
-        "7",
-        "6",
-        "5",
-        "4",
+        "2",
         "3",
-        "2"
-      ],
-      "id": "ab58"
+        "4"
+      ]
     }
   ],
   "stack": [
@@ -205,7 +110,7 @@
       "studentCount": "8",
       "status": true,
       "mainTeacher": "Nurillo Suyunboyev",
-      "teacherId": "1",
+      "teacherId": null,
       "supportTeacher": "Isroil Omonjonov",
       "room": "Facebook"
     },
@@ -217,7 +122,7 @@
       "studentCount": "18",
       "status": false,
       "mainTeacher": "Valijon Quvondiqov",
-      "teacherId": "bc99",
+      "teacherId": null,
       "supportTeacher": "Isroil Omonjonov",
       "room": "Tesla"
     },
@@ -229,7 +134,7 @@
       "studentCount": "20",
       "status": true,
       "mainTeacher": "Hondamir Usmonov",
-      "teacherId": "f2b9",
+      "teacherId": null,
       "supportTeacher": "Ibrohimjon Sadriddinov",
       "room": "Instagram"
     }
